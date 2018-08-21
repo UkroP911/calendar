@@ -169,7 +169,15 @@ class Calendar extends Component{
 
         const {authUser} = this.props;
 
+        const {onSetUsers} = this.props;
+
         db.doNote(authUser.uid,selectedDate.toDateString(), title, content);
+
+        db.onceGetUsers()
+            .then(snapshot =>{
+                // console.log(snapshot.val());
+                return onSetUsers(snapshot.val())
+            })
 
         this.modalHandler();
 
