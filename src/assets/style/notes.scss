@@ -1,0 +1,57 @@
+.notes-container{
+  position: relative;
+  overflow: hidden;
+  height: 50%;
+  //padding: 15px;
+  color: #000000;
+  border-top: 1px solid var(--border-color);
+  .total-notes-wrap{
+    //display: none;
+    border-bottom-color: var(--text-color);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.notes-content{
+  overflow: auto;
+  height: 100%;
+}
+.note-item{
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+.note-item:nth-child(2n){
+  //background: #f2f2f2;
+}
+.note-content{
+  position: relative;
+  flex-grow: 1;
+}
+.note-number{
+  padding-right: 10px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.note-title{
+
+}
+.note-desc{
+
+}
+
+@media screen and (max-width: 576px){
+  .notes-container{
+    .total-notes-wrap{
+      //display: block;
+      border-bottom: 25px solid var(--text-color);
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      opacity: 1;
+      z-index: 1;
+      .total-notes{
+        display: block;
+      }
+    }
+  }
+}

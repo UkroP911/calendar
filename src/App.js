@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route } from 'react-router-dom';
 import * as routes from './constants/routes';
 import withAuthentication from './components/withAuthentication';
 
-import './App.css';
+import './assets/style/calendar.css';
 
 import Calendar from './containers/Calendar';
 import SignInPage from './containers/SignIn';

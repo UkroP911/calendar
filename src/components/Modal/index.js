@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../../assets/style/modal.css'
 
 export default (props) =>
     <div className="popup-overlay">
@@ -18,10 +19,10 @@ export default (props) =>
                     <div className="input-group-prepend">
                         <span className="input-group-text">Title</span>
                     </div>
-                    <input type="text" className="form-control" aria-label="Amount (to the nearest dollar)"
+                    <input type="text" className="form-control"
+                           required
                            name="title"
-                           // value={title}
-                           onChange={event => props.inputHandler('title', event.target.value)}
+                           onChange={event => !'' ? props.inputHandler('title', event.target.value) : props.inputHandler('title', ' ')}
                     >
                     </input>
                 </div>
@@ -30,8 +31,8 @@ export default (props) =>
                     <div className="input-group-prepend">
                         <span className="input-group-text">Note</span>
                     </div>
-                    <textarea className="form-control" aria-label="With textarea"
-                              onChange={event => props.inputHandler('content', event.target.value)}
+                    <textarea className="form-control" required
+                              onChange={event => !'' ? props.inputHandler('content', event.target.value) : props.inputHandler('content', ' ')}
                     >
                     </textarea>
                 </div>

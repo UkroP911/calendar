@@ -33,7 +33,6 @@ class Calendar extends Component{
         const {onSetUsers} = this.props;
         db.onceGetUsers()
             .then(snapshot =>{
-                // console.log(snapshot.val());
                 return onSetUsers(snapshot.val())
             })
     }
@@ -55,15 +54,17 @@ class Calendar extends Component{
                     </span>
                 </div>
                 <div className="col col-end">
-                    <button
-                        className="btn btn-default"
-                        type="button"
-                        onClick={auth.doSignOut}
-                    >
-                        Sign Out
-                    </button>
+
                     <div className="icon" onClick={this.nextMonth}>chevron_right</div>
                 </div>
+                <button
+                    className="btn btn-default btn-sm"
+                    type="button"
+                    onClick={auth.doSignOut}
+                >
+                    {/*Sign Out*/}
+                    <span className="icon">exit_to_app</span>
+                </button>
             </div>
         )
     }
@@ -75,15 +76,34 @@ class Calendar extends Component{
         let startDate = dateFns.startOfWeek(this.state.currentMonth);
 
         for (let i = 0; i < 7; i++){
+            const splitDay = dateFns.format(dateFns.addDays(startDate, i),dateFormat).split('');
             days.push(
                 <div className="col col-center" key={i}>
-                    {dateFns.format(dateFns.addDays(startDate, i),dateFormat)}
+                    {splitDay.map((item, id) => <span key={id}>{item}</span>)}
                 </div>
             )
         }
 
         return <div className="days row">{days}</div>
     }
+
+    renderTotalNotes(day){
+        const {user} = this.props;
+        const {authUser} = this.props;
+        const userData = user[authUser.uid];
+
+        const totalNotes = userData && userData.notes;
+
+        return userData && Object.keys(totalNotes).map((key, id) => {
+            return day.toDateString() === key
+                ? <div key={id} className="total-notes-wrap">
+                    <span  className="total-notes">  {Object.keys(totalNotes[key]).length}</span>
+                </div>
+                : null
+        })
+
+
+    };
 
     renderCells() {
         const { currentMonth, selectedDate } = this.state;
@@ -114,11 +134,12 @@ class Calendar extends Component{
                     >
                         <span className="number">{formattedDate}</span>
                         <span className="bg">{formattedDate}</span>
+                        {this.renderTotalNotes(cloneDay)}
                         {
                             dateFns.isSameDay(day, selectedDate)
                             ? <span
                                     onClick={this.modalHandler}
-                                    className="icon">note_add</span>
+                                    className="icon icon-note">note_add</span>
                             : null
                         }
                     </div>
@@ -175,9 +196,8 @@ class Calendar extends Component{
 
         db.onceGetUsers()
             .then(snapshot =>{
-                // console.log(snapshot.val());
                 return onSetUsers(snapshot.val())
-            })
+            });
 
         this.modalHandler();
 
@@ -196,33 +216,18 @@ class Calendar extends Component{
         const selectedDateNote = userData && userData.notes[selectedDate.toDateString()];
 
         return selectedDateNote
-                ? Object.keys(selectedDateNote).map(key => {
-
-                // console.log(selectedDateNote[key])
-
+                ? Object.keys(selectedDateNote).map((key, id) => {
                     return <DateNotes
                                     userData={selectedDateNote[key]}
                                     key={key}
+                                    id={id}
                                 />
-
-
-
-
                 })
                 : <div>None Notes</div>
     }
 
     render(){
         const {selectedDate} = this.state;
-        const {user} = this.props;
-        const {authUser} = this.props;
-        const userData = user[authUser.uid]
-
-
-
-        // console.log(userData);
-
-        // console.log(this.props.authUser.uid)
         return(
             <div className="calendar-wrapper">
                 <div className="calendar">
@@ -230,12 +235,11 @@ class Calendar extends Component{
                     {this.renderDays()}
                     {this.renderCells()}
                 </div>
-                {/*{this.state.showNotes && <DateNotes*/}
-                    {/*selectedDate={selectedDate}*/}
-                {/*/>}*/}
-                {/*<div>{selectedDate && selectedDate.toDateString()}</div>*/}
                 <div className="notes-container">
-                    {this.renderNotes()}
+                    {this.renderTotalNotes(selectedDate)}
+                    <div className="notes-content">
+                        {this.renderNotes()}
+                    </div>
                 </div>
                 {this.state.showModal &&
                 <Modal
