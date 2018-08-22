@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fff1295-fbd2-4ed6-8ef3-a94ff61196c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/style/calendar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/style/modal.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/style/notes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DateNotes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DateNotes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Calendar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Calendar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/modal.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -81,7 +70,7 @@
           <entry key="html" value="11" />
           <entry key="js" value="883" />
           <entry key="json" value="4" />
-          <entry key="scss" value="1077" />
+          <entry key="scss" value="1082" />
           <entry key="vmoptions" value="2" />
         </counts>
       </usages-collector>
@@ -92,18 +81,18 @@
           <entry key="JSON" value="4" />
           <entry key="JavaScript" value="883" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="1077" />
+          <entry key="SCSS" value="1082" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="5" />
           <entry key="html" value="1" />
-          <entry key="js" value="5" />
+          <entry key="js" value="6" />
           <entry key="json" value="1" />
           <entry key="sass" value="1" />
-          <entry key="scss" value="5" />
-          <entry key="vmoptions" value="5" />
+          <entry key="scss" value="6" />
+          <entry key="vmoptions" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -111,9 +100,9 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="5" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="SCSS" value="5" />
+          <entry key="JavaScript" value="6" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="SCSS" value="6" />
           <entry key="Sass" value="1" />
         </counts>
       </usages-collector>
@@ -121,7 +110,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Calendar/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
@@ -138,6 +127,27 @@
                 <element signature="e#5897#6011#0" />
                 <element signature="e#6040#6500#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/SignUp/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/assets/style/modal.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -208,8 +218,8 @@
       <find>total-notes-wrap</find>
       <find>.calendar .body .cell .number</find>
       <find>.col-center</find>
-      <find>notesLength</find>
       <find>.notes-container</find>
+      <find>notesLength</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -244,12 +254,12 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$APPLICATION_CONFIG_DIR$/webstorm64.vmoptions" />
-        <option value="$PROJECT_DIR$/src/assets/style/modal.scss" />
         <option value="$PROJECT_DIR$/src/assets/style/calendar.scss" />
         <option value="$PROJECT_DIR$/src/components/DateNotes/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Calendar/index.js" />
         <option value="$PROJECT_DIR$/src/assets/style/notes.scss" />
         <option value="$PROJECT_DIR$/src/components/Modal/index.js" />
+        <option value="$PROJECT_DIR$/src/assets/style/modal.scss" />
       </list>
     </option>
   </component>
@@ -303,14 +313,27 @@
               <item name="diary-calendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="diary-calendar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="diary-calendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="diary-calendar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Modal" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="diary-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diary-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="diary-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diary-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="SignUp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -361,18 +384,18 @@
       <workItem from="1534490910250" duration="2393000" />
       <workItem from="1534493478245" duration="24833000" />
       <workItem from="1534842642384" duration="20440000" />
-      <workItem from="1534925095925" duration="9546000" />
+      <workItem from="1534925095925" duration="10986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63988000" />
+    <option name="totallyTimeSpent" value="65428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1922" height="1030" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12961012" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12961012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -386,7 +409,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.14222713" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.14443219" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -435,13 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-456">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/SignUp/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -546,24 +562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/webstorm64.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/style/modal.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -617,6 +619,30 @@
             <element signature="e#5897#6011#0" />
             <element signature="e#6040#6500#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SignUp/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/webstorm64.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/style/modal.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
