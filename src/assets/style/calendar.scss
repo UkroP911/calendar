@@ -130,7 +130,8 @@ main {
   height: 100%;
 }
 .calendar {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 100%;
   background: var(--neutral-color);
@@ -179,8 +180,11 @@ main {
 }
 
 .body{
+  flex: 1;
   height: 70%;
   border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .calendar .body .cell {
@@ -207,8 +211,9 @@ main {
 }
 
 .calendar .body .row {
-  height: calc(100% / 5);
-  min-height: 30px;
+  //height: calc(100% / 5);
+  flex: 1;
+  //min-height: 20px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -305,7 +310,7 @@ main {
   color: #ffffff;
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 667px), screen and (max-height: 500px){
   .calendar{
     .header{
       //padding: 5px 0;

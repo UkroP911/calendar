@@ -7,6 +7,7 @@
   border-top: 1px solid var(--border-color);
   .total-notes-wrap{
     //display: none;
+    top: -4px;
     border-bottom-color: var(--text-color);
     opacity: 0;
     z-index: -1;
@@ -20,6 +21,9 @@
 }
 .notes-content{
   position: relative;
+  height: 100%;
+}
+.notes-wrap{
   overflow: auto;
   height: 100%;
 }
@@ -41,14 +45,34 @@
   color: var(--text-color);
 }
 .note-title{
-
+  font-weight: 500;
 }
 .note-desc{
 
 }
 .icon-close{
+  position: relative;
   float: right;
   cursor: pointer;
+  //&:after{
+  //  content: 'DELETE';
+  //  display: block;
+  //  padding: 5px 10px;
+  //  background: #1a8fff;
+  //  color: #ffffff;
+  //  font-size: 14px;
+  //  position: absolute;
+  //  right: 0;
+  //  top: -25px;
+  //  border-radius: .25rem;
+  //  opacity: 0;
+  //  transition: all .2s ease;
+  //}
+  //&:hover{
+  //  &:after{
+  //    opacity: 1;
+  //  }
+  //}
 }
 .notes-empty{
   padding: 30px 15px 0;
@@ -58,7 +82,7 @@
   color: var(--text-color);
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 667px), screen and (max-height: 500px){
   .notes-container{
     .total-notes-wrap{
       //display: block;

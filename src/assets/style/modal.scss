@@ -22,6 +22,15 @@
 .modal-header{
   justify-content: flex-end;
 }
+.modal-body{
+  height: 70%;
+}
+.input-group-textarea{
+  height: 80%;
+  textarea{
+    max-height: 100%;
+  }
+}
 .modal-footer{
   position: absolute;
   bottom: 0;
@@ -32,9 +41,12 @@
   justify-content: space-between;
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 667px), screen and (max-height: 500px){
   .popup{
     height: 100%;
     width: 100%;
   }
+}
+@media screen and (max-width: 576px){
+
 }

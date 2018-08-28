@@ -11,17 +11,18 @@ export const doCreateUser = (id,username, email) =>
 export const onceGetUsers = () =>
     db.ref('users').once('value');
 
-export const doNote = (userId, date, title, content, noteTime) =>
+export const doNote = (userId, date, title, content, time) =>
     db.ref(`users/${userId}/notes`).child(date).push().set({
         title,
         content,
-        noteTime
+        time
     });
 
-export const editNote = (userId, date, title, content, noteId) => {
-    db.ref(`users/${userId}/notes/${date}/${noteId}`).set({
+export const editNote = (userId, date, title, content,time, noteId) => {
+    return db.ref(`users/${userId}/notes/${date}/${noteId}`).update({
         title,
-        content
+        content,
+        time
     })
 };
 

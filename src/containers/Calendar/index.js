@@ -27,7 +27,9 @@ class Calendar extends Component{
             content: '',
             noteTime: '',
             error: null,
-            reverse: true
+            reverse: true,
+            editNote: false,
+            currentNote: '',
         }
     }
 
@@ -160,7 +162,8 @@ class Calendar extends Component{
 
     modalHandler = () => {
         this.setState({
-            showModal: !this.state.showModal
+            showModal: !this.state.showModal,
+            editNote: false,
         })
     };
 
@@ -196,6 +199,8 @@ class Calendar extends Component{
 
         this.props.getNote({title, content});
 
+
+
         db.doNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime);
 
         db.onceGetUsers()
@@ -208,35 +213,86 @@ class Calendar extends Component{
         event.preventDefault();
     };
 
+    onEditHandler = (noteId) => {
+        this.modalHandler();
+        const selectedDateNote = this.selectedDateNote();
+        this.setState({
+            editNote: true,
+            currentNote: noteId
+        });
+    };
+
+    onEditSubmit = (event) => {
+        const {
+            selectedDate,
+            title,
+            content,
+            currentNote
+        } = this.state;
+
+        const {authUser} = this.props;
+
+        const {onSetUsers} = this.props;
+
+        db.editNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime,currentNote);
+
+        db.onceGetUsers()
+            .then(snapshot =>{
+                return onSetUsers(snapshot.val())
+            });
+
+        this.modalHandler();
+        event.preventDefault();
+    };
+
     inputHandler = (propName, value) => {
         this.setState(byPropKey(propName, value))
     };
 
-    renderNotes(){
-        const {
-            selectedDate,
-            reverse
-        } = this.state;
+    selectedDateNote = () => {
+        const {selectedDate} = this.state;
         const {user} = this.props;
         const {authUser} = this.props;
         const userData = user[authUser.uid];
-        const selectedDateNote = userData && userData.notes[selectedDate.toDateString()];
+        // const selectedDateNote = userData && userData.notes[selectedDate.toDateString()];
+        return userData && userData.notes[selectedDate.toDateString()];
+    };
 
-        const direction = (arr) => {
-            if (reverse){
-                return arr.reverse();
-            }
-            return arr
-        };
+    direction = (arr) => {
+        const {reverse} = this.state;
+        if (reverse){
+            return arr.reverse();
+        }
+        return arr;
+    };
+
+    renderNotes(){
+        // const {
+        //     selectedDate,
+        //     reverse
+        // } = this.state;
+        // const {user} = this.props;
+        // const {authUser} = this.props;
+        // const userData = user[authUser.uid];
+        // const selectedDateNote = userData && userData.notes[selectedDate.toDateString()];
+        //
+        // const direction = (arr) => {
+        //     if (reverse){
+        //         return arr.reverse();
+        //     }
+        //     return arr;
+        // };
+        const selectedDateNote = this.selectedDateNote();
 
         return selectedDateNote
-            ? direction(Object.keys(selectedDateNote)).map((key, id) => {
+            ? this.direction(Object.keys(selectedDateNote)).map((key, id) => {
                 return <DateNotes
                     userData={selectedDateNote[key]}
                     key={key}
                     noteId={key}
                     id={id}
                     deleteNote={this.deleteNote}
+                    onEditHandler={this.onEditHandler}
                 />
             })
             : <div className="notes-empty">Notes are empty</div>
@@ -260,7 +316,7 @@ class Calendar extends Component{
         });
 
     render(){
-        const {selectedDate} = this.state;
+        const {selectedDate, editNote, currentNote} = this.state;
         return(
             <div className="calendar-wrapper">
                 <div className="calendar">
@@ -277,14 +333,18 @@ class Calendar extends Component{
                     </div>
                     <div className="notes-content">
                         {this.renderTotalNotes(selectedDate)}
-                        {this.renderNotes()}
+                        <div className="notes-wrap">
+                            {this.renderNotes()}
+                        </div>
                     </div>
                 </div>
                 {this.state.showModal &&
                 <Modal
                     closeModal={this.modalHandler}
-                    onSubmit={this.onSubmit}
+                    onSubmit={!editNote ? this.onSubmit : this.onEditSubmit}
                     inputHandler={this.inputHandler}
+                    editNote={editNote}
+                    currentNote={this.selectedDateNote()[currentNote]}
                 />}
             </div>
         )
