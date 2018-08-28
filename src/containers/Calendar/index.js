@@ -25,7 +25,9 @@ class Calendar extends Component{
             showModal: false,
             title:'',
             content: '',
-            error: null
+            noteTime: '',
+            error: null,
+            reverse: true
         }
     }
 
@@ -192,7 +194,9 @@ class Calendar extends Component{
 
         const {onSetUsers} = this.props;
 
-        db.doNote(authUser.uid,selectedDate.toDateString(), title, content);
+        this.props.getNote({title, content});
+
+        db.doNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime);
 
         db.onceGetUsers()
             .then(snapshot =>{
@@ -209,22 +213,51 @@ class Calendar extends Component{
     };
 
     renderNotes(){
-        const {selectedDate} = this.state;
+        const {
+            selectedDate,
+            reverse
+        } = this.state;
         const {user} = this.props;
         const {authUser} = this.props;
         const userData = user[authUser.uid];
         const selectedDateNote = userData && userData.notes[selectedDate.toDateString()];
 
+        const direction = (arr) => {
+            if (reverse){
+                return arr.reverse();
+            }
+            return arr
+        };
+
         return selectedDateNote
-                ? Object.keys(selectedDateNote).map((key, id) => {
-                    return <DateNotes
-                                    userData={selectedDateNote[key]}
-                                    key={key}
-                                    id={id}
-                                />
-                })
-                : <div>None Notes</div>
+            ? direction(Object.keys(selectedDateNote)).map((key, id) => {
+                return <DateNotes
+                    userData={selectedDateNote[key]}
+                    key={key}
+                    noteId={key}
+                    id={id}
+                    deleteNote={this.deleteNote}
+                />
+            })
+            : <div className="notes-empty">Notes are empty</div>
     }
+
+    deleteNote = (key) => {
+        const {selectedDate} = this.state;
+        const {authUser, onSetUsers} = this.props;
+
+        db.deleteNote(authUser.uid, selectedDate.toDateString(), key);
+
+        db.onceGetUsers()
+            .then(snapshot =>{
+                return onSetUsers(snapshot.val())
+            });
+    };
+
+    changeDirection = () =>
+        this.setState({
+            reverse: !this.state.reverse
+        });
 
     render(){
         const {selectedDate} = this.state;
@@ -236,8 +269,14 @@ class Calendar extends Component{
                     {this.renderCells()}
                 </div>
                 <div className="notes-container">
-                    {this.renderTotalNotes(selectedDate)}
+
+                    <div className="notes-header">
+                        <button className="btn btn-default btn-sm"
+                            onClick={this.changeDirection}
+                        >Reverse</button>
+                    </div>
                     <div className="notes-content">
+                        {this.renderTotalNotes(selectedDate)}
                         {this.renderNotes()}
                     </div>
                 </div>
@@ -255,12 +294,14 @@ class Calendar extends Component{
 const mapStateToProps = (state) => {
     return {
         authUser: state.sessionState.authUser,
-        user: state.userState.user
+        user: state.userState.user,
+        note: state.noteState
     }
 };
 
 const mapDispatchToProps = (dispatch) => ({
     onSetUsers: (users) => dispatch (rootAction.setUsers(users)),
+    getNote: notes => dispatch(rootAction.getNotes(notes))
 });
 
 const authCondition = (authUser) => !!authUser;

@@ -7,9 +7,3 @@ export function setUsers(user) {
     }
 }
 
-export function getNotes(notes) {
-    return {
-        type: actions.GET_NOTES,
-        notes
-    }
-}

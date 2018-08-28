@@ -1,5 +1,7 @@
 import React from 'react';
-import '../../assets/style/modal.css'
+import '../../assets/style/modal.css';
+
+import TimePicker from '../../containers/TimePicker';
 
 export default (props) =>
     <div className="popup-overlay">
@@ -27,7 +29,7 @@ export default (props) =>
                     </input>
                 </div>
 
-                <div className="input-group">
+                <div className="input-group mb-3">
                     <div className="input-group-prepend">
                         <span className="input-group-text">Note</span>
                     </div>
@@ -36,8 +38,13 @@ export default (props) =>
                     >
                     </textarea>
                 </div>
+
+
             </div>
             <div className="modal-footer">
+                <TimePicker
+                    onChange={event => !'' ? props.inputHandler('noteTime', event.target.value) : props.inputHandler('noteTime', ' ')}
+                />
                 <button className="btn" type="submit">Save</button>
             </div>
         </form>
