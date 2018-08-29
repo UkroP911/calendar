@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8fff1295-fbd2-4ed6-8ef3-a94ff61196c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/notes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/notes.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DateNotes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DateNotes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Calendar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Calendar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TimePicker/Clock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TimePicker/Clock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/TimePicker/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TimePicker/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -75,9 +73,9 @@
         <counts>
           <entry key="css" value="17" />
           <entry key="html" value="11" />
-          <entry key="js" value="6497" />
+          <entry key="js" value="6584" />
           <entry key="json" value="4" />
-          <entry key="scss" value="1524" />
+          <entry key="scss" value="1537" />
           <entry key="vmoptions" value="2" />
         </counts>
       </usages-collector>
@@ -86,19 +84,19 @@
           <entry key="CSS" value="17" />
           <entry key="HTML" value="11" />
           <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="6497" />
+          <entry key="JavaScript" value="6584" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="1524" />
+          <entry key="SCSS" value="1537" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="5" />
           <entry key="html" value="1" />
-          <entry key="js" value="58" />
+          <entry key="js" value="59" />
           <entry key="json" value="2" />
           <entry key="sass" value="1" />
-          <entry key="scss" value="16" />
+          <entry key="scss" value="17" />
           <entry key="vmoptions" value="6" />
         </counts>
       </usages-collector>
@@ -107,9 +105,9 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="58" />
+          <entry key="JavaScript" value="59" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="SCSS" value="16" />
+          <entry key="SCSS" value="17" />
           <entry key="Sass" value="1" />
         </counts>
       </usages-collector>
@@ -150,8 +148,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/DateNotes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="342">
+              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -160,15 +158,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/style/notes.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/SignIn/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/TimePicker/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="68" column="11" lean-forward="true" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
+            <state relative-caret-position="376">
+              <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#1813#1834#0" />
-                <element signature="e#2502#2522#0" />
-                <element signature="e#2915#2936#0" />
+                <element signature="n#!!block;n#componentWillUnmount#0;n#TimePicker#0" />
+                <element signature="e#636#706#0" />
+                <element signature="e#726#796#0" />
+                <element signature="e#818#846#0" />
+                <element signature="e#882#1094#0" />
+                <element signature="e#1148#1375#0" />
               </folding>
             </state>
           </provider>
@@ -226,7 +245,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selected</find>
       <find>icon</find>
       <find>.calendar .body .col</find>
       <find>FRIENDS</find>
@@ -256,6 +274,7 @@
       <find>_pad</find>
       <find>.icon-close</find>
       <find>.calendar .body .row</find>
+      <find>note-title</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -275,7 +294,6 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/constants/routes.js" />
         <option value="$PROJECT_DIR$/src/firebase/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/SignIn/index.js" />
         <option value="$PROJECT_DIR$/src/assets/style/modal.sass" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/App.css" />
@@ -301,13 +319,14 @@
         <option value="$PROJECT_DIR$/src/reducers/notes.js" />
         <option value="$PROJECT_DIR$/src/containers/TimePicker/AmPmInfo.js" />
         <option value="$PROJECT_DIR$/src/assets/style/modal.scss" />
-        <option value="$PROJECT_DIR$/src/assets/style/notes.scss" />
         <option value="$PROJECT_DIR$/src/assets/style/calendar.scss" />
         <option value="$PROJECT_DIR$/src/containers/Calendar/index.js" />
         <option value="$PROJECT_DIR$/src/containers/TimePicker/Clock.js" />
         <option value="$PROJECT_DIR$/src/components/Modal/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/TimePicker/index.js" />
         <option value="$PROJECT_DIR$/src/firebase/db.js" />
+        <option value="$PROJECT_DIR$/src/containers/SignIn/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/TimePicker/index.js" />
+        <option value="$PROJECT_DIR$/src/assets/style/notes.scss" />
         <option value="$PROJECT_DIR$/src/components/DateNotes/index.js" />
       </list>
     </option>
@@ -413,6 +432,13 @@
               <item name="diary-calendar" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="SignIn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="diary-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diary-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="SignUp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -487,18 +513,18 @@
       <workItem from="1534925095925" duration="25464000" />
       <workItem from="1535011605980" duration="23715000" />
       <workItem from="1535442944873" duration="27566000" />
-      <workItem from="1535532982514" duration="10739000" />
+      <workItem from="1535532982514" duration="12916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141926000" />
+    <option name="totallyTimeSpent" value="144103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1922" height="1030" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12961012" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12961012" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -512,7 +538,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2061742" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2061742" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -544,13 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/SignIn/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -699,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/style/notes.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/TimePicker/Face.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-209">
@@ -787,19 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/TimePicker/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="68" column="11" lean-forward="true" selection-start-line="68" selection-start-column="11" selection-end-line="68" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#1813#1834#0" />
-            <element signature="e#2502#2522#0" />
-            <element signature="e#2915#2936#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/firebase/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -807,10 +806,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SignIn/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/TimePicker/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="n#!!block;n#componentWillUnmount#0;n#TimePicker#0" />
+            <element signature="e#636#706#0" />
+            <element signature="e#726#796#0" />
+            <element signature="e#818#846#0" />
+            <element signature="e#882#1094#0" />
+            <element signature="e#1148#1375#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/style/notes.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DateNotes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="342">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

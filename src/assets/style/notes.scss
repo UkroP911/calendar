@@ -46,13 +46,16 @@
 }
 .note-title{
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .note-desc{
 
 }
 .icon-close{
   position: relative;
-  float: right;
+  //float: right;
   cursor: pointer;
   //&:after{
   //  content: 'DELETE';

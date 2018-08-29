@@ -19,7 +19,11 @@ class TimePicker extends Component{
     }
 
     componentDidMount(){
+        const {defaultValue, editNote} = this.props;
         document.addEventListener("click", this.hideOnDocumentClick);
+        this.setState({
+            inputValue: editNote ? defaultValue : '12:00 AM'
+        })
     }
 
     componentWillUnmount(){
@@ -60,57 +64,15 @@ class TimePicker extends Component{
     };
 
     onTimeChanged = (hour, minute, am) => {
-        const {defaultValue, editNote} = this.props;
         this.setState({
             hour: hour,
             minute: minute === undefined ? 0 : minute,
             am: am,
-            // inputValue: _getTimeString(hour, minute, am) ? _getTimeString(hour, minute, am) : defaultValue
+            inputValue: _getTimeString(hour, minute, am),
         });
     };
 
     defaultValue = (inputValue) => {
-        const {defaultValue, editNote} = this.props;
-        // let stateValue = _getTimeString(hour, minute, am);
-
-
-
-        // console.log(defaultValue.split(/^([0-1]{0,1}[0-9]):(\d\d{0,1}){0,1}\s(AM|PM){0,1}$/));
-        // console.log(defaultValue.split(/^([0-1]{0,1}[0-9]):(\d\d{0,1}){0,1}\s(AM|PM){0,1}$/));
-        // console.log(defaultValue.split(/^$(\d\d{0,1}){1}(:\d\d{0,1}){0,1}(\sAM|\sPM){0,1}/));
-
-        console.log(this.state.inputValue);
-
-        // if (defaultValue){
-        //     return defaultValue
-        // }
-        // else {
-        //     // return _getTimeString(this.state.hour, this.state.minute, this.state.am)
-        //     return _getTimeString(hour, minute, am)
-        // }
-
-        // return _getTimeString(this.state.hour, this.state.minute, this.state.am);
-
-        // if (stateValue ){
-        //     console.log('poop')
-        // }
-        //
-        //
-        //
-        // if (defaultValue){
-        //     return defaultValue;
-        // } else if(defaultValue !== stateValue) {
-        //     return stateValue;
-        // } else {
-        //     return stateValue;
-        // }
-
-        // if (defaultValue){
-        //     return this.setState({
-        //         inputValue: defaultValue
-        //     });
-        // }
-
         return inputValue
     };
 
@@ -125,8 +87,9 @@ class TimePicker extends Component{
                     <input className="form-control"
                            readOnly="true"
                            // placeholder={this.props.defaultValue}
+                           value={this.state.inputValue}
                            // value={this.defaultValue(this.state.inputValue)}
-                           value={_getTimeString(this.state.hour, this.state.minute, this.state.am)}
+                           // value={_getTimeString(this.state.hour, this.state.minute, this.state.am)}
                            onClick={this.show}
                     />
                     {/*{console.log(this.props)}*/}
