@@ -4,7 +4,10 @@ import '../../assets/style/modal.css';
 import TimePicker from '../../containers/TimePicker';
 
 export default (props) =>
-    <div className="popup-overlay">
+    <div>
+        <div className="popup-overlay"
+             onClick={() => props.closeModal()}
+        > </div>
         <form className="popup"
             onSubmit={(event) => props.onSubmit(event)}
         >
@@ -34,7 +37,7 @@ export default (props) =>
                     <div className="input-group-prepend">
                         <span className="input-group-text">Note</span>
                     </div>
-                    <textarea className="form-control" required
+                    <textarea className="form-control"
                               defaultValue={props.editNote ? props.currentNote.content : ''}
                               onChange={event => !'' ? props.inputHandler('content', event.target.value) : props.inputHandler('content', ' ')}
                     >

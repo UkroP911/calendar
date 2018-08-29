@@ -164,7 +164,7 @@ class Calendar extends Component{
         this.setState({
             showModal: !this.state.showModal,
             editNote: false,
-        })
+        });
     };
 
     onDateClick = day => {
@@ -231,8 +231,6 @@ class Calendar extends Component{
             content,
             currentNote
         } = this.state;
-
-        console.log(title,content)
 
         const {authUser} = this.props;
 
