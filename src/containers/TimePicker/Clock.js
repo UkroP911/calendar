@@ -44,7 +44,7 @@ class Clock extends Component{
     };
 
     onMinuteChanged = (minute) => {
-        console.log(minute);
+        // console.log(minute);
         this.props.onDone();
         this._minute = minute;
 

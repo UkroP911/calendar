@@ -47,6 +47,7 @@ export default (props) =>
                 {/*{console.log(props)}*/}
                 <TimePicker
                     defaultValue={props.currentNote ? props.currentNote.time : ''}
+                    editNote={props.editNote}
                     onChange={event => !'' ? props.inputHandler('noteTime', event.target.value) : props.inputHandler('noteTime', ' ')}
                 />
                 <button className="btn" type="submit">Save</button>

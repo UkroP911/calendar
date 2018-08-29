@@ -344,7 +344,7 @@ class Calendar extends Component{
                     onSubmit={!editNote ? this.onSubmit : this.onEditSubmit}
                     inputHandler={this.inputHandler}
                     editNote={editNote}
-                    currentNote={this.selectedDateNote()[currentNote]}
+                    currentNote={editNote && this.selectedDateNote()[currentNote]}
                 />}
             </div>
         )
