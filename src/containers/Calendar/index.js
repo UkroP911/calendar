@@ -214,11 +214,13 @@ class Calendar extends Component{
     };
 
     onEditHandler = (noteId) => {
-        this.modalHandler();
         const selectedDateNote = this.selectedDateNote();
         this.setState({
+            showModal: !this.state.showModal,
             editNote: true,
-            currentNote: noteId
+            currentNote: noteId,
+            title: selectedDateNote[noteId].title,
+            content: selectedDateNote[noteId].content
         });
     };
 
@@ -229,6 +231,8 @@ class Calendar extends Component{
             content,
             currentNote
         } = this.state;
+
+        console.log(title,content)
 
         const {authUser} = this.props;
 
@@ -267,21 +271,6 @@ class Calendar extends Component{
     };
 
     renderNotes(){
-        // const {
-        //     selectedDate,
-        //     reverse
-        // } = this.state;
-        // const {user} = this.props;
-        // const {authUser} = this.props;
-        // const userData = user[authUser.uid];
-        // const selectedDateNote = userData && userData.notes[selectedDate.toDateString()];
-        //
-        // const direction = (arr) => {
-        //     if (reverse){
-        //         return arr.reverse();
-        //     }
-        //     return arr;
-        // };
         const selectedDateNote = this.selectedDateNote();
 
         return selectedDateNote
@@ -325,7 +314,6 @@ class Calendar extends Component{
                     {this.renderCells()}
                 </div>
                 <div className="notes-container">
-
                     <div className="notes-header">
                         <button className="btn btn-default btn-sm"
                             onClick={this.changeDirection}

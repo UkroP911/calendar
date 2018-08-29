@@ -6,7 +6,7 @@ import * as routes from '../../constants/routes';
 
 const SignUpPage = ({history}) =>
     <div>
-        <h1 className="py-5">SignUpPage</h1>
+        <h1 className="py-5 text-center">SignUpPage</h1>
         <SignUpForm history={history}/>
     </div>;
 
@@ -82,7 +82,7 @@ class SignUpForm extends Component{
         return(
             <div className="container">
                 <div className="row justify-content-center">
-                    <form onSubmit={this.onSubmit}>
+                    <form onSubmit={this.onSubmit} className="d-flex flex-column justify-content-center">
 
                         <div className="form-group">
                             <input

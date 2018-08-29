@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8fff1295-fbd2-4ed6-8ef3-a94ff61196c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/calendar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/calendar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/modal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/style/notes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/style/notes.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DateNotes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DateNotes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TimePicker/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TimePicker/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Calendar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Calendar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/SignIn/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/SignIn/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/SignUp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/SignUp/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,9 +78,9 @@
         <counts>
           <entry key="css" value="17" />
           <entry key="html" value="11" />
-          <entry key="js" value="6584" />
-          <entry key="json" value="4" />
-          <entry key="scss" value="1537" />
+          <entry key="js" value="6864" />
+          <entry key="json" value="7" />
+          <entry key="scss" value="1576" />
           <entry key="vmoptions" value="2" />
         </counts>
       </usages-collector>
@@ -83,31 +88,31 @@
         <counts>
           <entry key="CSS" value="17" />
           <entry key="HTML" value="11" />
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="6584" />
+          <entry key="JSON" value="7" />
+          <entry key="JavaScript" value="6864" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="1537" />
+          <entry key="SCSS" value="1576" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="5" />
           <entry key="html" value="1" />
-          <entry key="js" value="59" />
-          <entry key="json" value="2" />
+          <entry key="js" value="61" />
+          <entry key="json" value="3" />
           <entry key="sass" value="1" />
-          <entry key="scss" value="17" />
-          <entry key="vmoptions" value="6" />
+          <entry key="scss" value="18" />
+          <entry key="vmoptions" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="5" />
           <entry key="HTML" value="1" />
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="59" />
-          <entry key="PLAIN_TEXT" value="6" />
-          <entry key="SCSS" value="17" />
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="61" />
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="SCSS" value="18" />
           <entry key="Sass" value="1" />
         </counts>
       </usages-collector>
@@ -118,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Calendar/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3534">
-              <caret line="345" column="28" selection-start-line="345" selection-start-column="20" selection-end-line="345" selection-end-column="28" />
+            <state relative-caret-position="-278">
+              <caret line="315" column="49" selection-start-line="315" selection-start-column="49" selection-end-line="315" selection-end-column="49" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="n#!!block;n#componentDidMount#0;n#Calendar#0" />
@@ -127,7 +132,11 @@
                 <element signature="n#!!block;n#renderDays#0;n#Calendar#0" />
                 <element signature="n#!!block;n#renderTotalNotes#0;n#Calendar#0" />
                 <element signature="n#!!block;n#renderCells#0;n#Calendar#0" />
-                <element signature="n#!!block;n#renderNotes#0;n#Calendar#0" />
+                <element signature="e#5859#6394#0" />
+                <element signature="e#7218#7275#0" />
+                <element signature="e#7307#7641#0" />
+                <element signature="e#7669#7800#0" />
+                <element signature="e#8904#9201#0" />
               </folding>
             </state>
           </provider>
@@ -136,8 +145,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Modal/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
+            <state relative-caret-position="855">
+              <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -145,7 +154,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/DateNotes/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -160,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/style/notes.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+            <state relative-caret-position="253">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -169,47 +178,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/SignIn/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="413">
+              <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/TimePicker/index.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/containers/SignUp/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+            <state relative-caret-position="239">
+              <caret line="84" column="103" selection-start-line="84" selection-start-column="103" selection-end-line="84" selection-end-column="103" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="n#!!block;n#componentWillUnmount#0;n#TimePicker#0" />
-                <element signature="e#636#706#0" />
-                <element signature="e#726#796#0" />
-                <element signature="e#818#846#0" />
-                <element signature="e#882#1094#0" />
-                <element signature="e#1148#1375#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/TimePicker/Clock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/TimePicker/AmPmInfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -226,8 +208,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/style/calendar.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3458">
-              <caret line="182" column="10" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="10" />
+            <state relative-caret-position="291">
+              <caret line="351" column="36" selection-start-line="351" selection-start-column="36" selection-end-line="351" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/style/modal.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -245,10 +236,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon</find>
-      <find>.calendar .body .col</find>
-      <find>FRIENDS</find>
-      <find>FRIENDSCALENDAR</find>
       <find>.calendar .body .cell</find>
       <find>.header</find>
       <find>.icon</find>
@@ -275,6 +262,10 @@
       <find>.icon-close</find>
       <find>.calendar .body .row</find>
       <find>note-title</find>
+      <find>modal-header</find>
+      <find>icon-note</find>
+      <find>number</find>
+      <find>.notes-header</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -295,14 +286,12 @@
         <option value="$PROJECT_DIR$/src/constants/routes.js" />
         <option value="$PROJECT_DIR$/src/firebase/index.js" />
         <option value="$PROJECT_DIR$/src/assets/style/modal.sass" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$APPLICATION_CONFIG_DIR$/webstorm64.vmoptions" />
         <option value="$PROJECT_DIR$/src/components/withAuthentication/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/SignUp/index.js" />
         <option value="$PROJECT_DIR$/src/containers/TimePicker/TimePicker.js" />
         <option value="$PROJECT_DIR$/src/assets/style/timepicker.scss" />
         <option value="$PROJECT_DIR$/src/containers/TimePicker/Ticks.js" />
@@ -318,16 +307,18 @@
         <option value="$PROJECT_DIR$/src/actions/index.js" />
         <option value="$PROJECT_DIR$/src/reducers/notes.js" />
         <option value="$PROJECT_DIR$/src/containers/TimePicker/AmPmInfo.js" />
+        <option value="$PROJECT_DIR$/src/containers/TimePicker/Clock.js" />
+        <option value="$PROJECT_DIR$/src/firebase/db.js" />
+        <option value="$PROJECT_DIR$/src/containers/TimePicker/index.js" />
+        <option value="$PROJECT_DIR$/src/components/DateNotes/index.js" />
+        <option value="$PROJECT_DIR$/src/assets/style/notes.scss" />
         <option value="$PROJECT_DIR$/src/assets/style/modal.scss" />
         <option value="$PROJECT_DIR$/src/assets/style/calendar.scss" />
         <option value="$PROJECT_DIR$/src/containers/Calendar/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/TimePicker/Clock.js" />
         <option value="$PROJECT_DIR$/src/components/Modal/index.js" />
-        <option value="$PROJECT_DIR$/src/firebase/db.js" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/containers/SignIn/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/TimePicker/index.js" />
-        <option value="$PROJECT_DIR$/src/assets/style/notes.scss" />
-        <option value="$PROJECT_DIR$/src/components/DateNotes/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/SignUp/index.js" />
       </list>
     </option>
   </component>
@@ -513,12 +504,12 @@
       <workItem from="1534925095925" duration="25464000" />
       <workItem from="1535011605980" duration="23715000" />
       <workItem from="1535442944873" duration="27566000" />
-      <workItem from="1535532982514" duration="12916000" />
+      <workItem from="1535532982514" duration="17991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144103000" />
+    <option name="totallyTimeSpent" value="149178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1922" height="1030" extended-state="6" />
@@ -537,8 +528,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2061742" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.2061742" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49947312" visible="true" weight="0.1565601" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -598,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/webstorm64.vmoptions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/firebase/firebase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -636,24 +620,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/SignUp/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="74" lean-forward="true" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -698,6 +668,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -708,13 +681,6 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/style/modal.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -756,39 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/style/calendar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3458">
-          <caret line="182" column="10" selection-start-line="182" selection-start-column="10" selection-end-line="182" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Modal/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="49" column="44" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Calendar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3534">
-          <caret line="345" column="28" selection-start-line="345" selection-start-column="20" selection-end-line="345" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="n#!!block;n#componentDidMount#0;n#Calendar#0" />
-            <element signature="n#!!block;n#renderHeader#0;n#Calendar#0" />
-            <element signature="n#!!block;n#renderDays#0;n#Calendar#0" />
-            <element signature="n#!!block;n#renderTotalNotes#0;n#Calendar#0" />
-            <element signature="n#!!block;n#renderCells#0;n#Calendar#0" />
-            <element signature="n#!!block;n#renderNotes#0;n#Calendar#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/TimePicker/Clock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="893">
@@ -796,20 +729,6 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/firebase/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/SignIn/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
@@ -829,10 +748,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/style/notes.scss">
+    <entry file="file://$PROJECT_DIR$/src/firebase/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="68" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/webstorm64.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/style/modal.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/style/calendar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+          <caret line="351" column="36" selection-start-line="351" selection-start-column="36" selection-end-line="351" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Calendar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-278">
+          <caret line="315" column="49" selection-start-line="315" selection-start-column="49" selection-end-line="315" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="n#!!block;n#componentDidMount#0;n#Calendar#0" />
+            <element signature="n#!!block;n#renderHeader#0;n#Calendar#0" />
+            <element signature="n#!!block;n#renderDays#0;n#Calendar#0" />
+            <element signature="n#!!block;n#renderTotalNotes#0;n#Calendar#0" />
+            <element signature="n#!!block;n#renderCells#0;n#Calendar#0" />
+            <element signature="e#5859#6394#0" />
+            <element signature="e#7218#7275#0" />
+            <element signature="e#7307#7641#0" />
+            <element signature="e#7669#7800#0" />
+            <element signature="e#8904#9201#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Modal/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -842,6 +812,37 @@
           <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="90" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/style/notes.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SignIn/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/SignUp/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="84" column="103" selection-start-line="84" selection-start-column="103" selection-end-line="84" selection-end-column="103" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

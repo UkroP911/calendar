@@ -44,7 +44,6 @@ export default (props) =>
 
             </div>
             <div className="modal-footer">
-                {/*{console.log(props)}*/}
                 <TimePicker
                     defaultValue={props.currentNote ? props.currentNote.time : ''}
                     editNote={props.editNote}
