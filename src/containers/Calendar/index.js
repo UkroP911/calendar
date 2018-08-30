@@ -164,6 +164,8 @@ class Calendar extends Component{
         this.setState({
             showModal: !this.state.showModal,
             editNote: false,
+            title:'',
+            content: '',
         });
     };
 
@@ -199,9 +201,9 @@ class Calendar extends Component{
 
         this.props.getNote({title, content});
 
-
-
         db.doNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime);
+
+        console.log('onSubmit');
 
         db.onceGetUsers()
             .then(snapshot =>{
@@ -220,7 +222,7 @@ class Calendar extends Component{
             editNote: true,
             currentNote: noteId,
             title: selectedDateNote[noteId].title,
-            content: selectedDateNote[noteId].content
+            content: selectedDateNote[noteId].content,
         });
     };
 
@@ -237,6 +239,8 @@ class Calendar extends Component{
         const {onSetUsers} = this.props;
 
         db.editNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime,currentNote);
+
+        console.log('onEditSubmit')
 
         db.onceGetUsers()
             .then(snapshot =>{
