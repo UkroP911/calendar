@@ -22,7 +22,7 @@ class TimePicker extends Component{
         const {defaultValue, editNote} = this.props;
         document.addEventListener("click", this.hideOnDocumentClick);
         this.setState({
-            inputValue: editNote ? defaultValue : '12:00 AM'
+            inputValue: editNote ? defaultValue : '12:00 AM',
         })
     }
 
@@ -47,7 +47,9 @@ class TimePicker extends Component{
     };
 
     hideOnDocumentClick = (e) => {
-        const time = _getTimeString(this.state.hour, this.state.minute, this.state.am);
+        // const time = _getTimeString(this.state.hour, this.state.minute, this.state.am);
+        const time = this.state.inputValue;
+        console.log(time);
         this.props.getNotesTime(time);
         if (!this.parentsHaveClassName(e.target, "time-picker")) this.hide();
     };
@@ -72,12 +74,8 @@ class TimePicker extends Component{
         });
     };
 
-    defaultValue = (inputValue) => {
-        return inputValue
-    };
 
     render(){
-        // this.defaultValue();
         return(
             <div className="time-picker">
                 <div className="input-group">
@@ -86,13 +84,9 @@ class TimePicker extends Component{
                     </div>
                     <input className="form-control"
                            readOnly="true"
-                           // placeholder={this.props.defaultValue}
                            value={this.state.inputValue}
-                           // value={this.defaultValue(this.state.inputValue)}
-                           // value={_getTimeString(this.state.hour, this.state.minute, this.state.am)}
                            onClick={this.show}
                     />
-                    {/*{console.log(this.props)}*/}
                 </div>
                 <Clock visible={this.state.visible} position={this.state.position} onTimeChanged={this.onTimeChanged} onDone={this.onDone} hour={this.state.hour} minute={this.state.minute} am={this.state.am} />
             </div>
@@ -105,13 +99,11 @@ function _pad(value) {
 }
 
 function _getTimeString(hour, minute, am) {
-
-    // return value;
-
+    // const test = hour + '' + minute;
+    // console.log('poop', test);
     return hour + ":" + _pad(minute) + " " + (am ? "AM" : "PM");
 }
 const mapStateToProps = (state) => {
-    // console.log(state)
     return {
         noteTime: state.noteState.noteTime
     }

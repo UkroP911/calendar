@@ -236,7 +236,7 @@ class Calendar extends Component{
 
         const {onSetUsers} = this.props;
 
-        db.editNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime,currentNote);
+        db.editNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime, currentNote);
 
         db.onceGetUsers()
             .then(snapshot =>{
