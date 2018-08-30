@@ -64,7 +64,12 @@ class Login extends Component{
         return(
             <div className="login justify-content-center mt-5">
                 <div className="container">
-                    <div className="row justify-content-center">
+                    <div className="row ">
+                        <div className="col-xl-4">
+                            <div>Test credentials</div>
+                            <div>test@test.com</div>
+                            <div>qwerty</div>
+                        </div>
                         <div className="col-xl-4">
                             <form
                                 className="justifu-content-center d-flex flex-column"

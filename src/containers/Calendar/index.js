@@ -203,8 +203,6 @@ class Calendar extends Component{
 
         db.doNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime);
 
-        console.log('onSubmit');
-
         db.onceGetUsers()
             .then(snapshot =>{
                 return onSetUsers(snapshot.val())
@@ -239,8 +237,6 @@ class Calendar extends Component{
         const {onSetUsers} = this.props;
 
         db.editNote(authUser.uid,selectedDate.toDateString(), title, content, this.props.note.noteTime,currentNote);
-
-        console.log('onEditSubmit')
 
         db.onceGetUsers()
             .then(snapshot =>{
