@@ -21,9 +21,14 @@ class TimePicker extends Component{
     componentDidMount(){
         const {defaultValue, editNote} = this.props;
         document.addEventListener("click", this.hideOnDocumentClick);
-        this.setState({
-            inputValue: editNote ? defaultValue : '12:00 AM',
-        })
+        const defaultTime = defaultValue.split(/:|\s/);
+        if (editNote){
+            this.setState({
+                hour: defaultTime[0],
+                minute: defaultTime[1],
+                am: defaultTime[2] === "AM"
+            });
+        }
     }
 
     componentWillUnmount(){
@@ -47,9 +52,7 @@ class TimePicker extends Component{
     };
 
     hideOnDocumentClick = (e) => {
-        // const time = _getTimeString(this.state.hour, this.state.minute, this.state.am);
-        const time = this.state.inputValue;
-        console.log(time);
+        const time = _getTimeString(this.state.hour, this.state.minute, this.state.am);
         this.props.getNotesTime(time);
         if (!this.parentsHaveClassName(e.target, "time-picker")) this.hide();
     };
@@ -70,12 +73,12 @@ class TimePicker extends Component{
             hour: hour,
             minute: minute === undefined ? 0 : minute,
             am: am,
-            inputValue: _getTimeString(hour, minute, am),
         });
     };
 
 
     render(){
+        const {hour, minute, am} = this.state;
         return(
             <div className="time-picker">
                 <div className="input-group">
@@ -84,11 +87,11 @@ class TimePicker extends Component{
                     </div>
                     <input className="form-control"
                            readOnly="true"
-                           value={this.state.inputValue}
+                           value={_getTimeString(hour, minute, am)}
                            onClick={this.show}
                     />
                 </div>
-                <Clock visible={this.state.visible} position={this.state.position} onTimeChanged={this.onTimeChanged} onDone={this.onDone} hour={this.state.hour} minute={this.state.minute} am={this.state.am} />
+                <Clock visible={this.state.visible} position={this.state.position} onTimeChanged={this.onTimeChanged} onDone={this.onDone} hour={hour} minute={minute} am={am} />
             </div>
         )
     }
@@ -99,8 +102,6 @@ function _pad(value) {
 }
 
 function _getTimeString(hour, minute, am) {
-    // const test = hour + '' + minute;
-    // console.log('poop', test);
     return hour + ":" + _pad(minute) + " " + (am ? "AM" : "PM");
 }
 const mapStateToProps = (state) => {
