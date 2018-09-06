@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import rootAction from '../../actions';
+import dateFns from "date-fns";
 
 import Clock from './Clock';
 
@@ -14,19 +15,26 @@ class TimePicker extends Component{
             hour: 12,
             minute: 0,
             am: true,
-            inputValue: '12:00 AM',
         };
     }
 
     componentDidMount(){
         const {defaultValue, editNote} = this.props;
         document.addEventListener("click", this.hideOnDocumentClick);
-        const defaultTime = defaultValue.split(/:|\s/);
+        const defTime = dateFns.parse(defaultValue);
+        const hour = dateFns.format(defaultValue, 'hh');
+        const minute = dateFns.format(defaultValue, 'mm');
+        const am = dateFns.format(defaultValue, 'A');
+        // console.log('defaultValue', defaultValue);
+        // console.log('hour',hour)
+        // console.log('minute',minute)
+        // console.log('am:',am)
         if (editNote){
             this.setState({
-                hour: defaultTime[0],
-                minute: defaultTime[1],
-                am: defaultTime[2] === "AM"
+                hour: hour,
+                minute: minute,
+                // am: am === "AM",
+                am: am.match('AM')==='AM',
             });
         }
     }
@@ -52,7 +60,11 @@ class TimePicker extends Component{
     };
 
     hideOnDocumentClick = (e) => {
-        const time = _getTimeString(this.state.hour, this.state.minute, this.state.am);
+        const {hour, minute, am} = this.state;
+        const {selectedDate} = this.props;
+        // const time = _getTimeString(this.state.hour, this.state.minute, this.state.am);
+        const time = _getTimeObject(selectedDate, hour, minute, am);
+        // console.log(time)
         this.props.getNotesTime(time);
         if (!this.parentsHaveClassName(e.target, "time-picker")) this.hide();
     };
@@ -79,12 +91,15 @@ class TimePicker extends Component{
 
     render(){
         const {hour, minute, am} = this.state;
+        const {selectedDate} = this.props;
         return(
             <div className="time-picker">
                 <div className="input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text">Time</span>
                     </div>
+                    {/*<input type="hidden" value={_getTimeObject(selectedDate, hour, minute, am)}/>*/}
+                    {/*{console.log(this.state)}*/}
                     <input className="form-control"
                            readOnly="true"
                            value={_getTimeString(hour, minute, am)}
@@ -100,7 +115,26 @@ function _pad(value) {
     value = value.toString();
     return value.length === 1 ? "0" + value : value;
 }
+function _getTimeObject(date, hour, minute, am) {
 
+    let test = new Date(date).setHours(hour, minute,am);
+    let str = dateFns.format(test,'YYYY-MM-DDThh:mm') +  " " + (am ? "AM" : "PM");
+    let parse = dateFns.parse(str);
+
+
+
+    // console.log(dateFns.format(str, 'hh:mm'));
+    // console.log('date',date);
+    // console.log('hour',hour);
+    // console.log('minute',minute);
+    // console.log('am',am);
+
+
+    // console.log('test',str);
+
+    return dateFns.format(test,'YYYY-MM-DDThh:mm') +  " " + (am ? "AM" : "PM");
+    // return dateFns.format(test,'YYYY-MM-DDThh:mm');
+}
 function _getTimeString(hour, minute, am) {
     return hour + ":" + _pad(minute) + " " + (am ? "AM" : "PM");
 }

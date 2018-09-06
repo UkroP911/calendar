@@ -27,7 +27,7 @@ class Calendar extends Component{
             content: '',
             noteTime: '',
             error: null,
-            reverse: true,
+            reverse: false,
             editNote: false,
             currentNote: '',
         }
@@ -268,22 +268,63 @@ class Calendar extends Component{
         return arr;
     };
 
+    compareNumeric = (a, b) => {
+        if (a[1].time < b[1].time)
+            return -1;
+        if (a[1].time > b[1].time)
+            return 1;
+        return 0;
+    };
+
+    collectNotes = () => {
+        const selectedDateNote = this.selectedDateNote();
+        let notes = new Map();
+        selectedDateNote ? Object.keys(selectedDateNote).map(key => {
+            notes.set(key, selectedDateNote[key]);
+            })
+            :[];
+        return [...notes].sort(this.compareNumeric);
+    };
+
     renderNotes(){
         const selectedDateNote = this.selectedDateNote();
 
-        return selectedDateNote
-            ? this.direction(Object.keys(selectedDateNote)).map((key, id) => {
-                return <DateNotes
-                    userData={selectedDateNote[key]}
-                    key={key}
-                    noteId={key}
-                    id={id}
-                    deleteNote={this.deleteNote}
-                    onEditHandler={this.onEditHandler}
-                />
-            })
+        return selectedDateNote ? this.direction(this.collectNotes()).map((item,id) => {
+            return <DateNotes
+                userData={item[1]}
+                key={item[0]}
+                noteId={item[0]}
+                id={id}
+                deleteNote={this.deleteNote}
+                onEditHandler={this.onEditHandler}
+            />
+        })
             : <div className="notes-empty">Notes are empty</div>
     }
+
+
+    // renderNotes(){
+    //     const selectedDateNote = this.selectedDateNote();
+    //     // const arr = selectedDateNote && Object.keys(selectedDateNote);
+    //
+    //     this.collectNotes();
+    //     let arr = []
+    //     return selectedDateNote
+    //         ? this.direction(Object.keys(selectedDateNote)).map((key, id) => {
+    //             const test = dateFns.parse(selectedDateNote[key].time)
+    //             // console.log(test)
+    //             arr.push(selectedDateNote[key]);
+    //             return <DateNotes
+    //                 userData={selectedDateNote[key]}
+    //                 key={key}
+    //                 noteId={key}
+    //                 id={id}
+    //                 deleteNote={this.deleteNote}
+    //                 onEditHandler={this.onEditHandler}
+    //             />
+    //         })
+    //         : <div className="notes-empty">Notes are empty</div>
+    // }
 
     deleteNote = (key) => {
         const {selectedDate} = this.state;
@@ -323,6 +364,7 @@ class Calendar extends Component{
                             {this.renderNotes()}
                         </div>
                     </div>
+                    {/*{console.log(this.props.note.noteTime)}*/}
                 </div>
                 {this.state.showModal &&
                 <Modal
@@ -331,6 +373,7 @@ class Calendar extends Component{
                     inputHandler={this.inputHandler}
                     editNote={editNote}
                     currentNote={editNote && this.selectedDateNote()[currentNote]}
+                    selectedDate={selectedDate}
                 />}
             </div>
         )
