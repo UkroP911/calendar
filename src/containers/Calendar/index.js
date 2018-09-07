@@ -256,7 +256,6 @@ class Calendar extends Component{
         const {user} = this.props;
         const {authUser} = this.props;
         const userData = user[authUser.uid];
-        // const selectedDateNote = userData && userData.notes[selectedDate.toDateString()];
         return userData && userData.notes[selectedDate.toDateString()];
     };
 
@@ -279,11 +278,23 @@ class Calendar extends Component{
     collectNotes = () => {
         const selectedDateNote = this.selectedDateNote();
         let notes = new Map();
+        let amNotes = [];
+        let pmNotes = [];
+
         selectedDateNote ? Object.keys(selectedDateNote).map(key => {
             notes.set(key, selectedDateNote[key]);
             })
             :[];
-        return [...notes].sort(this.compareNumeric);
+        for (let i = 0; i < [...notes].length; i++){
+            if([...notes][i][1].time.match('AM')){
+                amNotes.push([...notes][i])
+            } else {
+                pmNotes.push([...notes][i])
+            }
+        }
+        amNotes.sort(this.compareNumeric);
+        pmNotes.sort(this.compareNumeric);
+        return amNotes.concat(pmNotes);
     };
 
     renderNotes(){
@@ -364,7 +375,6 @@ class Calendar extends Component{
                             {this.renderNotes()}
                         </div>
                     </div>
-                    {/*{console.log(this.props.note.noteTime)}*/}
                 </div>
                 {this.state.showModal &&
                 <Modal

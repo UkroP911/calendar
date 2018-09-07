@@ -3,10 +3,7 @@ import '../../assets/style/notes.css'
 import dateFns from "date-fns";
 
 export default (props) => {
-    const timeFormat = dateFns.format(props.userData.time, 'h:mm') + ' ' +(props.userData.time.match('AM')? 'AM' : 'PM');
-    const am = dateFns.format(props.userData.time, 'A');
-    // console.log(props.userData.time)
-    // console.log(dateFns.format('2018-09-13T20:00', 'hh:mm A'))
+    const timeFormat = dateFns.format(props.userData.time, 'h:mm') + ' ' +(props.userData.time.match('AM') ? 'AM' : 'PM');
     return <div className="note-item">
         <div className="note-number">{props.id +1}</div>
         <div className="note-content card">

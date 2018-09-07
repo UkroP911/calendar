@@ -21,10 +21,10 @@ class TimePicker extends Component{
     componentDidMount(){
         const {defaultValue, editNote} = this.props;
         document.addEventListener("click", this.hideOnDocumentClick);
-        const defTime = dateFns.parse(defaultValue);
+        // const defTime = dateFns.parse(defaultValue);
         const hour = dateFns.format(defaultValue, 'hh');
         const minute = dateFns.format(defaultValue, 'mm');
-        const am = dateFns.format(defaultValue, 'A');
+        // const am = dateFns.format(defaultValue, 'A');
         // console.log('defaultValue', defaultValue);
         // console.log('hour',hour)
         // console.log('minute',minute)
@@ -34,7 +34,7 @@ class TimePicker extends Component{
                 hour: hour,
                 minute: minute,
                 // am: am === "AM",
-                am: am.match('AM')==='AM',
+                am: !!defaultValue.match('AM'),
             });
         }
     }
@@ -64,7 +64,6 @@ class TimePicker extends Component{
         const {selectedDate} = this.props;
         // const time = _getTimeString(this.state.hour, this.state.minute, this.state.am);
         const time = _getTimeObject(selectedDate, hour, minute, am);
-        // console.log(time)
         this.props.getNotesTime(time);
         if (!this.parentsHaveClassName(e.target, "time-picker")) this.hide();
     };
@@ -91,7 +90,7 @@ class TimePicker extends Component{
 
     render(){
         const {hour, minute, am} = this.state;
-        const {selectedDate} = this.props;
+        // const {selectedDate} = this.props;
         return(
             <div className="time-picker">
                 <div className="input-group">
@@ -99,7 +98,6 @@ class TimePicker extends Component{
                         <span className="input-group-text">Time</span>
                     </div>
                     {/*<input type="hidden" value={_getTimeObject(selectedDate, hour, minute, am)}/>*/}
-                    {/*{console.log(this.state)}*/}
                     <input className="form-control"
                            readOnly="true"
                            value={_getTimeString(hour, minute, am)}
@@ -118,8 +116,8 @@ function _pad(value) {
 function _getTimeObject(date, hour, minute, am) {
 
     let test = new Date(date).setHours(hour, minute,am);
-    let str = dateFns.format(test,'YYYY-MM-DDThh:mm') +  " " + (am ? "AM" : "PM");
-    let parse = dateFns.parse(str);
+    // let str = dateFns.format(test,'YYYY-MM-DDThh:mm') +  " " + (am ? "AM" : "PM");
+    // let parse = dateFns.parse(str);
 
 
 
