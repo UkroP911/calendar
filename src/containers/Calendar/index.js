@@ -66,7 +66,6 @@ class Calendar extends Component{
                     type="button"
                     onClick={auth.doSignOut}
                 >
-                    {/*Sign Out*/}
                     <span className="icon">exit_to_app</span>
                 </button>
             </div>
