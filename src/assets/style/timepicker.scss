@@ -1,9 +1,7 @@
-div.time-picker{
-  //position: relative;
-}
 div.time-picker input {
   float: left;
   width: 100%;
+  max-width: 100px;
 }
 div.time-picker div.clock {
   position: absolute;

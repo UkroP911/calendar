@@ -30,6 +30,7 @@ class Calendar extends Component{
             reverse: false,
             editNote: false,
             currentNote: '',
+            fullScreen: false
         }
     }
 
@@ -45,24 +46,15 @@ class Calendar extends Component{
         const dateFormat = "MMMM YYYY";
         return(
             <div className="header row flex-middle">
-                <div className="col col-start">
-                    <div className="icon"
-                        onClick={this.prevMonth}
-                    >
-                        chevron_left
-                    </div>
-                </div>
                 <div className="col col-center">
-                    <span>
+                    <div className="icon col-center__icon" onClick={this.prevMonth}>chevron_left</div>
+                    <div className="header__date mx-3">
                         {dateFns.format(this.state.currentMonth, dateFormat)}
-                    </span>
-                </div>
-                <div className="col col-end">
-
-                    <div className="icon" onClick={this.nextMonth}>chevron_right</div>
+                    </div>
+                    <div className="icon col-center__icon" onClick={this.nextMonth}>chevron_right</div>
                 </div>
                 <button
-                    className="btn btn-default btn-sm"
+                    className="btn btn-default btn-sm header__btn"
                     type="button"
                     onClick={auth.doSignOut}
                 >
@@ -313,29 +305,6 @@ class Calendar extends Component{
     }
 
 
-    // renderNotes(){
-    //     const selectedDateNote = this.selectedDateNote();
-    //     // const arr = selectedDateNote && Object.keys(selectedDateNote);
-    //
-    //     this.collectNotes();
-    //     let arr = []
-    //     return selectedDateNote
-    //         ? this.direction(Object.keys(selectedDateNote)).map((key, id) => {
-    //             const test = dateFns.parse(selectedDateNote[key].time)
-    //             // console.log(test)
-    //             arr.push(selectedDateNote[key]);
-    //             return <DateNotes
-    //                 userData={selectedDateNote[key]}
-    //                 key={key}
-    //                 noteId={key}
-    //                 id={id}
-    //                 deleteNote={this.deleteNote}
-    //                 onEditHandler={this.onEditHandler}
-    //             />
-    //         })
-    //         : <div className="notes-empty">Notes are empty</div>
-    // }
-
     deleteNote = (key) => {
         const {selectedDate} = this.state;
         const {authUser, onSetUsers} = this.props;
@@ -353,8 +322,13 @@ class Calendar extends Component{
             reverse: !this.state.reverse
         });
 
+    fullScreen = () =>
+        this.setState({
+            fullScreen: !this.state.fullScreen
+        });
+
     render(){
-        const {selectedDate, editNote, currentNote} = this.state;
+        const {selectedDate, editNote, currentNote, fullScreen, reverse} = this.state;
         return(
             <div className="calendar-wrapper">
                 <div className="calendar">
@@ -362,11 +336,23 @@ class Calendar extends Component{
                     {this.renderDays()}
                     {this.renderCells()}
                 </div>
-                <div className="notes-container">
+                <div className={fullScreen ? "notes-container notes-container_fullscreen" : "notes-container"}
+                >
                     <div className="notes-header">
-                        <button className="btn btn-default btn-sm"
-                            onClick={this.changeDirection}
-                        >Reverse</button>
+                        {
+                            fullScreen
+                                ? <div className="notes-header__date">{dateFns.format(selectedDate, 'D MMMM')  }</div>
+                                : ''
+                        }
+
+                        <div className="notes-header__btn-group">
+                            <button className="btn btn-default btn-sm mr-3"
+                                    onClick={this.fullScreen}
+                            >Full screen</button>
+                            <button className="btn btn-default btn-sm"
+                                    onClick={this.changeDirection}
+                            >Sort {reverse ? <span className="icon">arrow_downward</span> : <span className="icon">arrow_upward</span>}</button>
+                        </div>
                     </div>
                     <div className="notes-content">
                         {this.renderTotalNotes(selectedDate)}

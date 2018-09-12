@@ -1,9 +1,15 @@
 .notes-container{
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
   height: 50%;
+  width: 100%;
   color: #000000;
   border-top: 1px solid var(--border-color);
+  transition: all .2s cubic-bezier(.55,.56,.79,.78);
+  background: #fff;
+  z-index: 1;
   .total-notes-wrap{
     top: -4px;
     border-bottom-color: var(--text-color);
@@ -11,13 +17,35 @@
     z-index: -1;
   }
 }
+.notes-container_fullscreen{
+  height: 100%;
+
+}
 .notes-header{
+  position: relative;
+  top: 0;
+  left: 0;
   height: 10%;
   min-height: 40px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   padding: 5px 15px;
   border-bottom: 1px solid var(--text-color);
+}
+.notes-header__date{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 115%;
+  color: var(--text-color);
+  animation: fadeIn .2s;
+  transition: all .2s ease;
+}
+.notes-header__btn-group{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .notes-content{
   position: relative;
@@ -31,6 +59,7 @@
   padding: 15px;
   display: flex;
   align-items: center;
+  animation: fadeIn .2s;
 }
 .note-item:nth-child(2n){
 }
@@ -64,6 +93,27 @@
   color: var(--text-color);
 }
 
+.badge-button{
+  transition: all .2s ease;
+  display: inline-flex;
+  align-items: center;
+  &:hover{
+    transform: scale(1.1, 1.2);
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 667px), screen and (max-height: 500px){
   .notes-container{
     .total-notes-wrap{
@@ -76,5 +126,11 @@
         display: block;
       }
     }
+  }
+  .notes-header{
+    justify-content: flex-start;
+  }
+  .notes-header__date{
+    font-size: 12px;
   }
 }

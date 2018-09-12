@@ -4,6 +4,7 @@ import {HashRouter as Router, Route } from 'react-router-dom';
 import * as routes from './constants/routes';
 import withAuthentication from './components/withAuthentication';
 
+import './assets/lib/bootstrap4.1.3/css/bootstrap.css';
 import './assets/style/calendar.css';
 
 import Calendar from './containers/Calendar';

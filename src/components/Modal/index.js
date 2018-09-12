@@ -13,7 +13,7 @@ export default (props) =>
         >
             <div className="modal-header">
                 <button
-                    className="btn"
+                    className="btn badge-button"
                     onClick={() => props.closeModal()}
                 >
                     <span className="icon">close</span>
@@ -32,7 +32,6 @@ export default (props) =>
                     >
                     </input>
                 </div>
-
                 <div className="input-group mb-3 input-group-textarea">
                     <div className="input-group-prepend">
                         <span className="input-group-text">Note</span>
@@ -43,8 +42,6 @@ export default (props) =>
                     >
                     </textarea>
                 </div>
-
-
             </div>
             <div className="modal-footer">
                 <TimePicker
@@ -53,7 +50,7 @@ export default (props) =>
                     selectedDate={props.selectedDate}
                     onChange={event => !'' ? props.inputHandler('noteTime', event.target.value) : props.inputHandler('noteTime', ' ')}
                 />
-                <button className="btn" type="submit">Save</button>
+                <button className="btn badge-button" type="submit">Save</button>
             </div>
         </form>
     </div>

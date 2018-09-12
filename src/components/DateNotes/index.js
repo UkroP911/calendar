@@ -13,10 +13,10 @@ export default (props) => {
                     <span>&nbsp;&nbsp;|&nbsp;&nbsp;{props.userData.title}</span>
                 </div>
                 <div>
-                        <span className="badge icon-close mr-3 badge-secondary"
-                              onClick={() => props.onEditHandler(props.noteId)}
-                        >Edit</span>
-                    <span className="icon icon-close badge badge-secondary"
+                    <span className="badge icon-close mr-3 badge-secondary badge-button"
+                          onClick={() => props.onEditHandler(props.noteId)}
+                    >Edit</span>
+                    <span className="icon icon-close badge badge-secondary badge-button"
                           onClick={() => props.deleteNote(props.noteId)}
                     >close</span>
                 </div>
